@@ -45,7 +45,7 @@ Partial Class LeaseForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnClose, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.cboVehicle, Me.ToolStripSeparator2, Me.ToolStripLabel2, Me.cboEngine, Me.ToolStripSeparator3, Me.ToolStripLabel3, Me.cboMake})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(685, 32)
+        Me.ToolStrip1.Size = New System.Drawing.Size(764, 28)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -55,7 +55,7 @@ Partial Class LeaseForm
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
         Me.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(49, 29)
+        Me.btnClose.Size = New System.Drawing.Size(49, 25)
         Me.btnClose.Text = "Close"
         '
         'ToolStripSeparator1
@@ -112,14 +112,14 @@ Partial Class LeaseForm
         Me.dgvVehicles.Location = New System.Drawing.Point(12, 31)
         Me.dgvVehicles.Name = "dgvVehicles"
         Me.dgvVehicles.RowTemplate.Height = 24
-        Me.dgvVehicles.Size = New System.Drawing.Size(661, 407)
+        Me.dgvVehicles.Size = New System.Drawing.Size(740, 407)
         Me.dgvVehicles.TabIndex = 1
         '
         'LeaseForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(685, 450)
+        Me.ClientSize = New System.Drawing.Size(764, 450)
         Me.Controls.Add(Me.dgvVehicles)
         Me.Controls.Add(Me.ToolStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D

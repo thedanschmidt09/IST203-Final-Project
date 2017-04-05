@@ -9,3 +9,7 @@ C:\Users\nopassword\Desktop\3rd Semester\Advanced VB\Projects\Final Project\Fina
 C:\Users\nopassword\Desktop\3rd Semester\Advanced VB\Projects\Final Project\Final Project\Final Project\obj\Debug\Final Project.exe
 C:\Users\nopassword\Desktop\3rd Semester\Advanced VB\Projects\Final Project\Final Project\Final Project\obj\Debug\Final Project.xml
 C:\Users\nopassword\Desktop\3rd Semester\Advanced VB\Projects\Final Project\Final Project\Final Project\obj\Debug\Final Project.pdb
+C:\Users\nopassword\Desktop\3rd Semester\Advanced VB\Projects\Final Project\Final Project\Final Project\bin\Debug\VehicleSelection.mdf
+C:\Users\nopassword\Desktop\3rd Semester\Advanced VB\Projects\Final Project\Final Project\Final Project\bin\Debug\VehicleSelection_log.ldf
+C:\Users\nopassword\Desktop\3rd Semester\Advanced VB\Projects\Final Project\Final Project\Final Project\obj\Debug\Final_Project.BuyForm.resources
+C:\Users\nopassword\Desktop\3rd Semester\Advanced VB\Projects\Final Project\Final Project\Final Project\obj\Debug\Final_Project.LeaseForm.resources
