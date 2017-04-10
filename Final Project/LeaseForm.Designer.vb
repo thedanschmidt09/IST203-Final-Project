@@ -22,6 +22,7 @@ Partial Class LeaseForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LeaseForm))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnClose = New System.Windows.Forms.ToolStripButton()
@@ -35,8 +36,23 @@ Partial Class LeaseForm
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.cboMake = New System.Windows.Forms.ToolStripComboBox()
         Me.dgvVehicles = New System.Windows.Forms.DataGridView()
+        Me.VehicleSelectionDataSet = New Final_Project.VehicleSelectionDataSet()
+        Me.LeaseInventoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LeaseInventoryTableAdapter = New Final_Project.VehicleSelectionDataSetTableAdapters.LeaseInventoryTableAdapter()
+        Me.VehicleIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MakeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ModelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CylindersDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.YearDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MileageDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MPGDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.dgvVehicles, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VehicleSelectionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LeaseInventoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -61,44 +77,44 @@ Partial Class LeaseForm
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 28)
         '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(94, 29)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(94, 25)
         Me.ToolStripLabel1.Text = "Vehicle Type:"
         '
         'cboVehicle
         '
         Me.cboVehicle.Name = "cboVehicle"
-        Me.cboVehicle.Size = New System.Drawing.Size(121, 32)
+        Me.cboVehicle.Size = New System.Drawing.Size(121, 28)
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 28)
         '
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(92, 29)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(92, 25)
         Me.ToolStripLabel2.Text = "Engine Type:"
         '
         'cboEngine
         '
         Me.cboEngine.Name = "cboEngine"
-        Me.cboEngine.Size = New System.Drawing.Size(121, 32)
+        Me.cboEngine.Size = New System.Drawing.Size(121, 28)
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 28)
         '
         'ToolStripLabel3
         '
         Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(48, 29)
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(48, 25)
         Me.ToolStripLabel3.Text = "Make:"
         '
         'cboMake
@@ -108,12 +124,102 @@ Partial Class LeaseForm
         '
         'dgvVehicles
         '
+        Me.dgvVehicles.AllowUserToAddRows = False
+        Me.dgvVehicles.AllowUserToDeleteRows = False
+        Me.dgvVehicles.AutoGenerateColumns = False
         Me.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvVehicles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VehicleIDDataGridViewTextBoxColumn, Me.MakeDataGridViewTextBoxColumn, Me.ModelDataGridViewTextBoxColumn, Me.ColorDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn, Me.CylindersDataGridViewTextBoxColumn, Me.YearDataGridViewTextBoxColumn, Me.MileageDataGridViewTextBoxColumn, Me.MPGDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
+        Me.dgvVehicles.DataSource = Me.LeaseInventoryBindingSource
         Me.dgvVehicles.Location = New System.Drawing.Point(12, 31)
         Me.dgvVehicles.Name = "dgvVehicles"
+        Me.dgvVehicles.ReadOnly = True
         Me.dgvVehicles.RowTemplate.Height = 24
         Me.dgvVehicles.Size = New System.Drawing.Size(740, 407)
         Me.dgvVehicles.TabIndex = 1
+        '
+        'VehicleSelectionDataSet
+        '
+        Me.VehicleSelectionDataSet.DataSetName = "VehicleSelectionDataSet"
+        Me.VehicleSelectionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'LeaseInventoryBindingSource
+        '
+        Me.LeaseInventoryBindingSource.DataMember = "LeaseInventory"
+        Me.LeaseInventoryBindingSource.DataSource = Me.VehicleSelectionDataSet
+        '
+        'LeaseInventoryTableAdapter
+        '
+        Me.LeaseInventoryTableAdapter.ClearBeforeFill = True
+        '
+        'VehicleIDDataGridViewTextBoxColumn
+        '
+        Me.VehicleIDDataGridViewTextBoxColumn.DataPropertyName = "Vehicle ID"
+        Me.VehicleIDDataGridViewTextBoxColumn.HeaderText = "Vehicle ID"
+        Me.VehicleIDDataGridViewTextBoxColumn.Name = "VehicleIDDataGridViewTextBoxColumn"
+        Me.VehicleIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MakeDataGridViewTextBoxColumn
+        '
+        Me.MakeDataGridViewTextBoxColumn.DataPropertyName = "Make"
+        Me.MakeDataGridViewTextBoxColumn.HeaderText = "Make"
+        Me.MakeDataGridViewTextBoxColumn.Name = "MakeDataGridViewTextBoxColumn"
+        Me.MakeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ModelDataGridViewTextBoxColumn
+        '
+        Me.ModelDataGridViewTextBoxColumn.DataPropertyName = "Model"
+        Me.ModelDataGridViewTextBoxColumn.HeaderText = "Model"
+        Me.ModelDataGridViewTextBoxColumn.Name = "ModelDataGridViewTextBoxColumn"
+        Me.ModelDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ColorDataGridViewTextBoxColumn
+        '
+        Me.ColorDataGridViewTextBoxColumn.DataPropertyName = "Color"
+        Me.ColorDataGridViewTextBoxColumn.HeaderText = "Color"
+        Me.ColorDataGridViewTextBoxColumn.Name = "ColorDataGridViewTextBoxColumn"
+        Me.ColorDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TypeDataGridViewTextBoxColumn
+        '
+        Me.TypeDataGridViewTextBoxColumn.DataPropertyName = "Type"
+        Me.TypeDataGridViewTextBoxColumn.HeaderText = "Type"
+        Me.TypeDataGridViewTextBoxColumn.Name = "TypeDataGridViewTextBoxColumn"
+        Me.TypeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CylindersDataGridViewTextBoxColumn
+        '
+        Me.CylindersDataGridViewTextBoxColumn.DataPropertyName = "Cylinders"
+        Me.CylindersDataGridViewTextBoxColumn.HeaderText = "Cylinders"
+        Me.CylindersDataGridViewTextBoxColumn.Name = "CylindersDataGridViewTextBoxColumn"
+        Me.CylindersDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'YearDataGridViewTextBoxColumn
+        '
+        Me.YearDataGridViewTextBoxColumn.DataPropertyName = "Year"
+        Me.YearDataGridViewTextBoxColumn.HeaderText = "Year"
+        Me.YearDataGridViewTextBoxColumn.Name = "YearDataGridViewTextBoxColumn"
+        Me.YearDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MileageDataGridViewTextBoxColumn
+        '
+        Me.MileageDataGridViewTextBoxColumn.DataPropertyName = "Mileage"
+        Me.MileageDataGridViewTextBoxColumn.HeaderText = "Mileage"
+        Me.MileageDataGridViewTextBoxColumn.Name = "MileageDataGridViewTextBoxColumn"
+        Me.MileageDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MPGDataGridViewTextBoxColumn
+        '
+        Me.MPGDataGridViewTextBoxColumn.DataPropertyName = "MPG"
+        Me.MPGDataGridViewTextBoxColumn.HeaderText = "MPG"
+        Me.MPGDataGridViewTextBoxColumn.Name = "MPGDataGridViewTextBoxColumn"
+        Me.MPGDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PriceDataGridViewTextBoxColumn
+        '
+        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "Price"
+        Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
+        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
+        Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
         '
         'LeaseForm
         '
@@ -128,6 +234,8 @@ Partial Class LeaseForm
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.dgvVehicles, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VehicleSelectionDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LeaseInventoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -145,4 +253,17 @@ Partial Class LeaseForm
     Friend WithEvents ToolStripLabel3 As ToolStripLabel
     Friend WithEvents cboMake As ToolStripComboBox
     Friend WithEvents dgvVehicles As DataGridView
+    Friend WithEvents VehicleSelectionDataSet As VehicleSelectionDataSet
+    Friend WithEvents LeaseInventoryBindingSource As BindingSource
+    Friend WithEvents LeaseInventoryTableAdapter As VehicleSelectionDataSetTableAdapters.LeaseInventoryTableAdapter
+    Friend WithEvents VehicleIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MakeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ModelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ColorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CylindersDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents YearDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MileageDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MPGDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
