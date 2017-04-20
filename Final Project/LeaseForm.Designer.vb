@@ -36,9 +36,6 @@ Partial Class LeaseForm
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.cboMake = New System.Windows.Forms.ToolStripComboBox()
         Me.dgvVehicles = New System.Windows.Forms.DataGridView()
-        Me.VehicleSelectionDataSet = New Final_Project.VehicleSelectionDataSet()
-        Me.LeaseInventoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.LeaseInventoryTableAdapter = New Final_Project.VehicleSelectionDataSetTableAdapters.LeaseInventoryTableAdapter()
         Me.VehicleIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MakeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ModelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,10 +46,13 @@ Partial Class LeaseForm
         Me.MileageDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MPGDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LeaseInventoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VehicleSelectionDataSet = New Final_Project.VehicleSelectionDataSet()
+        Me.LeaseInventoryTableAdapter = New Final_Project.VehicleSelectionDataSetTableAdapters.LeaseInventoryTableAdapter()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.dgvVehicles, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VehicleSelectionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LeaseInventoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VehicleSelectionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -61,7 +61,7 @@ Partial Class LeaseForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnClose, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.cboVehicle, Me.ToolStripSeparator2, Me.ToolStripLabel2, Me.cboEngine, Me.ToolStripSeparator3, Me.ToolStripLabel3, Me.cboMake})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(764, 28)
+        Me.ToolStrip1.Size = New System.Drawing.Size(573, 25)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -71,56 +71,59 @@ Partial Class LeaseForm
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
         Me.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(49, 25)
+        Me.btnClose.Size = New System.Drawing.Size(40, 22)
         Me.btnClose.Text = "Close"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 28)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(94, 25)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(75, 22)
         Me.ToolStripLabel1.Text = "Vehicle Type:"
         '
         'cboVehicle
         '
+        Me.cboVehicle.Items.AddRange(New Object() {"Sedan", "SUV", "Truck", "Coupe", "Crossover"})
         Me.cboVehicle.Name = "cboVehicle"
-        Me.cboVehicle.Size = New System.Drawing.Size(121, 28)
+        Me.cboVehicle.Size = New System.Drawing.Size(92, 25)
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 28)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(92, 25)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(74, 22)
         Me.ToolStripLabel2.Text = "Engine Type:"
         '
         'cboEngine
         '
+        Me.cboEngine.Items.AddRange(New Object() {"4 Cyl.", "6 Cyl.", "8 Cyl."})
         Me.cboEngine.Name = "cboEngine"
-        Me.cboEngine.Size = New System.Drawing.Size(121, 28)
+        Me.cboEngine.Size = New System.Drawing.Size(92, 25)
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 28)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripLabel3
         '
         Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(48, 25)
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(39, 22)
         Me.ToolStripLabel3.Text = "Make:"
         '
         'cboMake
         '
+        Me.cboMake.Items.AddRange(New Object() {"Ford", "Toyota", "Jeep", "Dodge", "Chrysler", "Chevrolet", "Acura", "Nissan"})
         Me.cboMake.Name = "cboMake"
-        Me.cboMake.Size = New System.Drawing.Size(121, 28)
+        Me.cboMake.Size = New System.Drawing.Size(92, 25)
         '
         'dgvVehicles
         '
@@ -130,26 +133,13 @@ Partial Class LeaseForm
         Me.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVehicles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VehicleIDDataGridViewTextBoxColumn, Me.MakeDataGridViewTextBoxColumn, Me.ModelDataGridViewTextBoxColumn, Me.ColorDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn, Me.CylindersDataGridViewTextBoxColumn, Me.YearDataGridViewTextBoxColumn, Me.MileageDataGridViewTextBoxColumn, Me.MPGDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
         Me.dgvVehicles.DataSource = Me.LeaseInventoryBindingSource
-        Me.dgvVehicles.Location = New System.Drawing.Point(12, 31)
+        Me.dgvVehicles.Location = New System.Drawing.Point(9, 25)
+        Me.dgvVehicles.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvVehicles.Name = "dgvVehicles"
         Me.dgvVehicles.ReadOnly = True
         Me.dgvVehicles.RowTemplate.Height = 24
-        Me.dgvVehicles.Size = New System.Drawing.Size(740, 407)
+        Me.dgvVehicles.Size = New System.Drawing.Size(555, 331)
         Me.dgvVehicles.TabIndex = 1
-        '
-        'VehicleSelectionDataSet
-        '
-        Me.VehicleSelectionDataSet.DataSetName = "VehicleSelectionDataSet"
-        Me.VehicleSelectionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'LeaseInventoryBindingSource
-        '
-        Me.LeaseInventoryBindingSource.DataMember = "LeaseInventory"
-        Me.LeaseInventoryBindingSource.DataSource = Me.VehicleSelectionDataSet
-        '
-        'LeaseInventoryTableAdapter
-        '
-        Me.LeaseInventoryTableAdapter.ClearBeforeFill = True
         '
         'VehicleIDDataGridViewTextBoxColumn
         '
@@ -221,21 +211,36 @@ Partial Class LeaseForm
         Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
         Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'LeaseInventoryBindingSource
+        '
+        Me.LeaseInventoryBindingSource.DataMember = "LeaseInventory"
+        Me.LeaseInventoryBindingSource.DataSource = Me.VehicleSelectionDataSet
+        '
+        'VehicleSelectionDataSet
+        '
+        Me.VehicleSelectionDataSet.DataSetName = "VehicleSelectionDataSet"
+        Me.VehicleSelectionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'LeaseInventoryTableAdapter
+        '
+        Me.LeaseInventoryTableAdapter.ClearBeforeFill = True
+        '
         'LeaseForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(764, 450)
+        Me.ClientSize = New System.Drawing.Size(573, 366)
         Me.Controls.Add(Me.dgvVehicles)
         Me.Controls.Add(Me.ToolStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "LeaseForm"
         Me.Text = "Lease"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.dgvVehicles, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VehicleSelectionDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LeaseInventoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VehicleSelectionDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
