@@ -87,7 +87,7 @@ Partial Class LeaseForm
         '
         'cboVehicle
         '
-        Me.cboVehicle.Items.AddRange(New Object() {"Sedan", "SUV", "Truck", "Coupe", "Crossover"})
+        Me.cboVehicle.Items.AddRange(New Object() {"Sedan", "SUV", "Coupe", "Truck"})
         Me.cboVehicle.Name = "cboVehicle"
         Me.cboVehicle.Size = New System.Drawing.Size(92, 25)
         '
@@ -104,7 +104,7 @@ Partial Class LeaseForm
         '
         'cboEngine
         '
-        Me.cboEngine.Items.AddRange(New Object() {"4 Cyl.", "6 Cyl.", "8 Cyl."})
+        Me.cboEngine.Items.AddRange(New Object() {"4", "6", "8"})
         Me.cboEngine.Name = "cboEngine"
         Me.cboEngine.Size = New System.Drawing.Size(92, 25)
         '
@@ -121,7 +121,7 @@ Partial Class LeaseForm
         '
         'cboMake
         '
-        Me.cboMake.Items.AddRange(New Object() {"Ford", "Toyota", "Jeep", "Dodge", "Chrysler", "Chevrolet", "Acura", "Nissan"})
+        Me.cboMake.Items.AddRange(New Object() {"Acura", "Dodge", "Chevrolet", "Nissan", "Toyota"})
         Me.cboMake.Name = "cboMake"
         Me.cboMake.Size = New System.Drawing.Size(92, 25)
         '
@@ -134,7 +134,7 @@ Partial Class LeaseForm
         Me.dgvVehicles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.VehicleIDDataGridViewTextBoxColumn, Me.MakeDataGridViewTextBoxColumn, Me.ModelDataGridViewTextBoxColumn, Me.ColorDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn, Me.CylindersDataGridViewTextBoxColumn, Me.YearDataGridViewTextBoxColumn, Me.MileageDataGridViewTextBoxColumn, Me.MPGDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
         Me.dgvVehicles.DataSource = Me.LeaseInventoryBindingSource
         Me.dgvVehicles.Location = New System.Drawing.Point(9, 25)
-        Me.dgvVehicles.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvVehicles.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvVehicles.Name = "dgvVehicles"
         Me.dgvVehicles.ReadOnly = True
         Me.dgvVehicles.RowTemplate.Height = 24
@@ -233,7 +233,7 @@ Partial Class LeaseForm
         Me.Controls.Add(Me.dgvVehicles)
         Me.Controls.Add(Me.ToolStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LeaseForm"
         Me.Text = "Lease"
         Me.ToolStrip1.ResumeLayout(False)
